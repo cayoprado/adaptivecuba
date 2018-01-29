@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="br.com.adaptive.adptivecuba.web.noticia.NoticiaEdit"
+        datasource="noticiaDs"
+        focusComponent="fieldGroup"
+        messagesPack="br.com.adaptive.adptivecuba.web.noticia">
+    <dsContext>
+        <datasource id="noticiaDs"
+                    class="br.com.adaptive.adptivecuba.entity.Noticia"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="noticiaDs">
+            <column width="250px">
+                <field property="titulo"/>
+                <field property="texto"
+                       rows="5"/>
+                <field property="isDestaque"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>
